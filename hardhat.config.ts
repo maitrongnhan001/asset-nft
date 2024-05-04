@@ -1,6 +1,5 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-require('dotenv').config();
 
 const config: HardhatUserConfig = {
   defaultNetwork: "avax",
@@ -9,7 +8,7 @@ const config: HardhatUserConfig = {
     },
     "avax": {
       url: "https://rpc.ankr.com/avalanche_fuji	",
-      accounts: [process.env.DEPLOYER_PRIVATE_KEY as string]
+      accounts: ["9b9cae76155d7ad9e1ea2958a95f92a8bb1f9580ddb9699354a3b9ac5f960445"]
     }
   },
   solidity: {

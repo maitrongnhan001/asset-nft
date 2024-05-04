@@ -1,8 +1,7 @@
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
-require('dotenv').config();
 
-const tokenName = process.env.TOKEN_NAME;
-const tokenSymbol = process.env.TOKEN_SYMBOL;
+const tokenName = "Asset";
+const tokenSymbol = "Asset";
 
 const AssetModule = buildModule("AssetModule", (m: any) => {
   const tokenN = m.getParameter("name", tokenName);

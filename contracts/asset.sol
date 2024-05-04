@@ -11,8 +11,9 @@ contract Asset is ERC721 {
     uint256 public tokenCount;
 
     constructor (string memory _name, string memory _symbol) {
-        name    = _name;
-        symbol  = _symbol;
+        name        = _name;
+        symbol      = _symbol;
+        tokenCount  = 0;
     }
 
     function tokenURI(uint256 tokenID) public view returns(string memory) {

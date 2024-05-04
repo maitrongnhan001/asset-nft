@@ -71,6 +71,8 @@ contract ERC721 /* is ERC165 */ {
     /// @param tokenId The NFT to transfer
     /// @param data Additional data with no specified format, sent in call to `_to`
     function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory data) public payable {
+        require(data.length != 0, "Data must not empty");
+
         transferFrom(from, to, tokenId);
 
         require(_checkOnERC721Received(), "Receiver is not implemented");

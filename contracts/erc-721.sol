@@ -107,7 +107,7 @@ contract ERC721 /* is ERC165 */ {
 
         approve(address(0), tokenId);
         _balances[from] -= 1;
-        _balances[to]   -= 1;
+        _balances[to]   += 1;
         _owners[tokenId] = to;
         
         emit Transfer(from, to, tokenId);
